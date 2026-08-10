@@ -1,4 +1,4 @@
-name: Deploy to Animate 2025 site
+name: Deploy to Animate 2026 site
 
 on:
   # Trigger the workflow every time you push to the `master` branch
@@ -16,7 +16,7 @@ permissions:
 
 jobs:
   build:
-    runs-on: animate2025
+    runs-on: animate2026
     steps:
       - name: Checkout your repository using git
         uses: actions/checkout@v4
