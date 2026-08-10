@@ -1,8 +1,7 @@
 ---
 import Main from '../layouts/main.astro';
-import Hero from '../images/home-img-updated.png';
-import logo from '../images/animate-25-logo(1).png';
-import Syngif from '../images/homebnr-note(1).png';
+import Hero from '../images/hero.png';
+import logo from '../images/logo-2026.png';
 import fos from '../images/fossee-logo.png';
 import iit from '../images/IITB-logo.png';
 // import regi from '../images/btn-01-a.png';
@@ -82,35 +81,38 @@ import iit from '../images/IITB-logo.png';
         </div></div>
       <!-- </nav> -->
     </div>
-  <section id="hero">
-    <img  class="w-full object-cover p-4 m-4"  src={Hero.src} alt="WELCOM TO SYNFIG STUDIO HACKATHON" decoding="async" />
-    <div class="h-auto flex flex-col">
-     
-      <!-- <div class="static lg:absolute bottom-0 lg:bottom-10">
-        <a href="https://spoken-tutorial.org/tutorial-search/?search_foss=Synfig&search_language=" target="_blank">
-        <img  src={Syngif.src} alt="WELCOM TO SYNFIG STUDIO HACKATHON" decoding="async" />
-        </a>
-      </div> -->
-       <div class=" pt-3 flex items-center  justify-center content-center">
-      <div class="static lg:absolute  bottom-14 lg:bottom-0 ">
-        <a href="https://spoken-tutorial.org/tutorial-search/?search_foss=Synfig&search_language=" target="_blank">
-          <img  
-            src={Syngif.src} 
-            alt="WELCOME TO SYNFIG STUDIO HACKATHON" 
-            decoding="async"
-            width="702"
-      height="256"
-      class="object-cover my-6"
-    class="flex justify-center items-center right:8rem"
-      class="my-6 mx-auto ml-10"
-          />
-        </a>
-      </div>
-   </div> 
-     
+    <!-- Hero image -->
+<!-- Hero image -->
+  <section id="hero" class="relative w-full">
+    <!-- Image -->
+    <img 
+      class="w-full object-cover p-2" 
+      src={Hero.src} 
+      alt="WELCOME TO SYNFIG STUDIO HACKATHON" 
+      decoding="async" 
+    />
+
+    <!-- Text Patch Centered at Bottom of Hero -->
+    <div
+      class="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2
+             w-[85%] max-w-[700px]
+             bg-[#333333]
+             text-white
+             rounded-2xl
+             px-6 py-4
+             justify-center content-center
+             text-center
+             shadow-lg z-10"
+    >
+      <p class="text-lg md:text-2xl lg:text-3xl font-medium leading-tight">
+        Bring storytelling imagination to life with
+        <span class="font-normal">
+          Synfig Studio, Blender,
+        </span>
+        and the spark of AI.
+      </p>
     </div>
   </section>
-
 
    
 </Main>

@@ -1,15 +1,13 @@
 [
  
   { "label": "About", "href": "/about" },
-  { "label": "Theme", "href": "/theme" },
-  {"label": "Awards", "href": "/awards"},
-  {"label": "Results", "href": "/results"},
-
+  { "label": "Eligibility", "href": "/eligibility" },
   { "label": "Resources", "href": "/resources" },
-  { "label": "Rules", "href": "/rules" },
-  { "label": "Workshop", "href": "/workshop" },
+  { "label": "Rules and Regulations", "href": "/rules" },
+  { "label": "Theme", "href": "/theme" },
 
-  { "label": "Partners", "href": "/partners" },
-  { "label": "Contact", "href": "/contact" },
-  {"label": "FAQs", "href": "/contact#faq"}
+  {"label": "FAQs", "href": "/contact#faq"},
+  {"label": "Partners", "href": "/partners"},
+  { "label": "Contact", "href": "/contact" }
+
 ]

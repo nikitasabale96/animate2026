@@ -1,9 +1,5 @@
 ---
 import Main from '../layouts/main.astro';
-import edivgibidivty from '../images/edivgibidivty.png';
-// import { sdivde } from 'astro:transitions';
-import fossee from '../images/fossee-logo.png';
-import iitb from '../images/IITB-logo.png';
 import focal from '../images/focal.png';
 import spoken from '../images/spoken.png';
 import srishti from '../images/srishti-manipal-logo.png';
@@ -13,144 +9,137 @@ import newlogo from '../images/WWI New Logo (Black).png';
 ---
 
 <Main>
-    <section id="partner">
-         <div class="flex items-center justify-center mb-2 mt-4">
-        <h1 class="justify-end text-4xl">Knowledge Partner: <span class="text-lg justify-center">Design Led Innovation Program, Srishti Manipal Institute, MAHE - Bangalore</span></h1>
+  <section id="partner" class="bg-white py-12">
+    <div class="mx-auto max-w-6xl px-6">
+      
+      <!-- Knowledge Partner Heading -->
+      <div class="mb-6 text-center">
+        <h2 class="text-2xl font-bold text-[#800000ff] sm:text-3xl">
+          Knowledge Partner
+        </h2>
+        <p class="mt-1 text-sm font-medium text-gray-600 sm:text-base">
+          Design Led Innovation Program, Srishti Manipal Institute, MAHE - Bangalore
+        </p>
       </div>
-    <!-- First Row -->
-    <div class="border-4 border-[#1f2937] rounded-t-[18px] border-b-[23px] rounded-b-lg p-4 text-white" style="border: ;">
-      <!-- Your content for the first row goes here -->
-      <!-- <p>Partners </p> -->
-      <div class="grid gap-4 grid-cols-3 place-items-center items-center justify-center">
 
-        <div class="text-red-300">
-          <a href="https://srishtimanipalinstitute.in/" target="_blank" class="flex-1 border-indigo-600 items-center justify-center rounded-md overflow-hidden">
-      
-            <img class="logos" src={srishti.src} alt="regi" decoding="async" />
-        
-            
-          </a></div>
-          <div class="text-red-300">
-          <a href="https://www.manipal.edu/mu.html" target="_blank" class="flex-1 border-indigo-600 items-center justify-center rounded-md overflow-hidden">
-      
-            <img class="logos" src={manipal.src} alt="regi" decoding="async" />
-        
-            
+      <!-- Knowledge Partner Card -->
+      <div class="mb-12 rounded-xl border border-gray-100 bg-white p-6 shadow-sm">
+        <div class="grid grid-cols-1 items-center justify-items-center gap-6 sm:grid-cols-3">
+          <a
+            href="https://srishtimanipalinstitute.in/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="transition-transform duration-200 hover:scale-105"
+          >
+            <img
+              src={srishti.src}
+              alt="Srishti Manipal Institute"
+              decoding="async"
+              class="max-h-16 w-auto object-contain"
+            />
           </a>
-          </div>
-          <div class="text-red-300">
-            <a href="https://www.manipal.edu/mu.html" target="_blank" class="flex-1 border-indigo-600 items-center justify-center rounded-md overflow-hidden">
+
+          <a
+            href="https://www.manipal.edu/mu.html"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="transition-transform duration-200 hover:scale-105"
+          >
+            <img
+              src={manipal.src}
+              alt="Manipal Academy of Higher Education"
+              decoding="async"
+              class="max-h-16 w-auto object-contain"
+            />
+          </a>
+
+          <a
+            href="https://www.manipal.edu/mu.html"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="transition-transform duration-200 hover:scale-105"
+          >
+            <img
+              src={mbc.src}
+              alt="Manipal Bangalore Campus"
+              decoding="async"
+              class="max-h-16 w-auto object-contain"
+            />
+          </a>
+        </div>
+      </div>
+
+      <!-- Other Partners Grid -->
+      <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
         
-              <img class="logos" src={mbc.src} alt="manipal Banglore Campus" decoding="async" />
-          
-              
+        <!-- Resource Partner -->
+        <div class="flex flex-col rounded-xl border border-gray-100 bg-white p-6 text-center shadow-sm">
+          <h3 class="mb-6 text-lg font-bold text-[#800000ff]">
+            Resource Partner
+          </h3>
+          <div class="my-auto flex items-center justify-center">
+            <a
+              href="https://focal.fossee.in"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="transition-transform duration-200 hover:scale-105"
+            >
+              <img
+                src={focal.src}
+                alt="FOCAL Resource Partner"
+                decoding="async"
+                class="max-h-16 w-auto object-contain"
+              />
             </a>
-            </div>
-      
-
+          </div>
         </div>
+
+        <!-- Execution Partner -->
+        <div class="flex flex-col rounded-xl border border-gray-100 bg-white p-6 text-center shadow-sm">
+          <h3 class="mb-6 text-lg font-bold text-[#800000ff]">
+            Execution Partner
+          </h3>
+          <div class="my-auto flex items-center justify-center">
+            <a
+              href="https://www.whistlingwoods.net/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="transition-transform duration-200 hover:scale-105"
+            >
+              <img
+                src={newlogo.src}
+                alt="Whistling Woods International"
+                decoding="async"
+                class="max-h-16 w-auto object-contain"
+              />
+            </a>
+          </div>
         </div>
-<!-- <div class="grid grid-cols-2 gap-4 mb-2 mt-2">
-<div class="flex items-center justify-center">
-  <h1 class="justify-end text-4xl">Execution Partner</h1>
-</div>
-<div class="flex items-center justify-center">
-  <h1 class="justify-end text-4xl">Youth Partner</h1>
-</div>
-</div>
-<div class="grid grid-cols-2 gap-4">
- First Row 
-<div class="border-4 border-[#1f2937] rounded-t-[18px] border-b-[23px] rounded-b-lg p-4 text-white" style="border: ;">
- Your content for the first row goes here 
-<p>Partners </p> 
-<div class="grid gap-4 grid-cols-1 place-items-center items-center justify-center">
-  <div class="text-red-300">
-    <a href="https://www.whistlingwoods.net/" target="_blank" class="flex-1 border-indigo-600 items-center justify-center rounded-md overflow-hidden">
 
-      <img class="logos" src={ww.src} alt="regi" decoding="async" width="200px" /> 
-       <img src="../images/register.png" alt="Image 1" class="w-1/4 w-25"> -->
-  
-      
-    <!-- </a></div> -->
+        <!-- Learning Partner -->
+        <div class="flex flex-col rounded-xl border border-gray-100 bg-white p-6 text-center shadow-sm">
+          <h3 class="mb-6 text-lg font-bold text-[#800000ff]">
+            Learning Partner
+          </h3>
+          <div class="my-auto flex items-center justify-center">
+            <a
+              href="https://spoken-tutorial.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="transition-transform duration-200 hover:scale-105"
+            >
+              <img
+                src={spoken.src}
+                alt="Spoken Tutorial"
+                decoding="async"
+                class="max-h-16 w-auto object-contain"
+              />
+            </a>
+          </div>
+        </div>
 
-
-  <!-- </div> -->
-   <!-- </div>  -->
-
-<!-- First Row -->
-<!-- <div class="border-4 border-[#1f2937] rounded-t-[18px] border-b-[23px] rounded-b-lg p-4 text-white" style="border: ;"> -->
-<!-- Your content for the first row goes here -->
-<!-- <p>Partners </p> -->
-<!-- <div class="grid gap-4 grid-cols-1 place-items-center items-center justify-center"> -->
-  <!-- <div class="text-red-300"> -->
-    <!-- <a href="https://yas.nic.in/" target="_blank" class="flex-1 border-indigo-600 items-center justify-center rounded-md overflow-hidden"> -->
-
-      <!-- <img class="logos" src="https://yas.nic.in/sites/all/themes/youthaffair/logo.png" alt="regi" decoding="async" /> -->
-      <!-- <img src="../images/register.png" alt="Image 1" class="w-1/4 w-25"> -->
-  
-      
-    <!-- </a></div> -->
-
-
-  <!-- </div> -->
-  <!-- </div>    -->
-  <!-- </div> -->
-      <!-- Second partners
-<div class="grid grid-cols-2 gap-4 mt-4 mb-2">
- <div class="flex items-center justify-center">
-        <h1 class="justify-end text-4xl">Resource Partner</h1>
       </div>
-     
-      Section Titles -->
-<div class="grid grid-cols-3 gap-4 mt-4 mb-2">
-  <div class="flex items-center justify-center">
-    <h1 class="text-2xl text-center">Resource Partner</h1>
-  </div>
-  <div class="flex items-center justify-center">
-    <h1 class="text-2xl text-center">Execution Partner</h1>
-  </div>
-  <div class="flex items-center justify-center">
-    <h1 class="text-2xl text-center">Learning Partner</h1>
-  </div>
-</div>
 
-<!-- Partner Logos (Same border as old code, single row) -->
-<div class="grid grid-cols-3 gap-4">
-  <!-- Resource Partner -->
-  <div class="border-4 border-[#1f2937] rounded-t-[18px] border-b-[23px] rounded-b-lg p-4 text-white">
-    <div class="grid place-items-center items-center justify-center">
-      <div class="text-red-300">
-        <a href="https://focal.fossee.in" target="_blank" class="flex-1 border-indigo-600 items-center justify-center rounded-md overflow-hidden">
-          <img class="logos" src={focal.src} alt="Focal Resource Partner" decoding="async" />
-        </a>
-      </div>
     </div>
-  </div>
-
-  <!-- Execution Partner -->
-  <div class="border-4 border-[#1f2937] rounded-t-[18px] border-b-[23px] rounded-b-lg p-4 text-white">
-    <div class="grid place-items-center items-center justify-center">
-      <div class="text-red-300">
-        <a href="https://www.whistlingwoods.net/" target="_blank" class="flex-1 border-indigo-600 items-center justify-center rounded-md overflow-hidden">
-          <img class="logos" src={newlogo.src} alt="Whistling Woods International" decoding="async" />
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <!-- Learning Partner -->
-  <div class="border-4 border-[#1f2937] rounded-t-[18px] border-b-[23px] rounded-b-lg p-4 text-white">
-    <div class="grid place-items-center items-center justify-center">
-      <div class="text-red-300">
-        <a href="https://spoken-tutorial.org/" target="_blank" class="flex-1 border-indigo-600 items-center justify-center rounded-md overflow-hidden">
-          <img class="logos" src={spoken.src} alt="Spoken Tutorial" decoding="async" />
-        </a>
-      </div>
-    </div>
-  </div>
-</div>
-
-     
-      </section>
-      
-    </Main>
+  </section>
+</Main>

@@ -1,93 +1,73 @@
 ---
 import Main from '../layouts/main.astro';
-
-import marvels from '../images/mechanical marvels.jpg';
-import creature from '../images/mythical creature.jpg';
-import nature from '../images/natures symphony.jpg';
-import celebration from '../images/cultural celebration.jpg';
-import cityspace from '../images/futuristic cityspace.jpg';
-import hero from '../images/journey of heroes.jpg';
-
-const blenderThemes = [
-  {
-    title: "FUTURISTIC CITYSPACE",
-    desc: "Design a futuristic city with intricate details and animations like flying vehicles or dynamic lighting.",
-    img: cityspace
-  },
-  {
-    title: "MYTHICAL CREATURES",
-    desc: "Animate a mythical creature in its habitat, showcasing movement and personality.",
-    img: creature
-  },
-  {
-    title: "MECHANICAL MARVELS",
-    desc: "Create and animate a mechanical gadget or robot performing a task.",
-    img: marvels
-  }
-];
-
-const synfigThemes = [
-  {
-    title: "JOURNEY OF A HERO",
-    desc: "Narrate a life journey of your favorite character journey using 2D characters and dynamic storytelling techniques.",
-    img: hero
-  },
-  {
-    title: "CULTURAL CELEBRATIONS",
-    desc: "Depict a traditional celebration or festival with animated sequences.",
-    img: celebration
-  },
-  {
-    title: "NATURE'S SYMPHONY",
-    desc: "Use 2D elements to showcase the harmony of natural ecosystems.",
-    img: nature
-  }
-];
+import theme from '../images/theme.png';
 ---
 
 <Main>
-  <section class="px-6 py-10 font-sans">
-    <h1 class="section-title text-4xl pb-3 text-center">Themes for ANIMATE 2025</h1>
+  <section id="themes" class="bg-white py-12">
+    <div class="mx-auto max-w-7xl px-6">
+      
+      <!-- Section Heading -->
+      <h2 class="text-3xl font-bold text-center text-[#800000ff] mb-8">
+        Themes for ANIMATE 2026
+      </h2>
 
-    <!-- Blender 3D Themes -->
-    <div class="mb-16">
-      <h2 class="justify-end text-4xl mb-4">Blender 3D Themes</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {
-          blenderThemes.map(theme => (
-            <div class="bg-white rounded-2xl overflow-hidden shadow-lg transition-transform hover:-translate-y-1">
-                  {/* <img src={theme.img} alt={theme.title} class="w-full h-48 object-cover" /> */}
-                  <img src={theme.img.src} alt={theme.title} class="w-full h-72 object-cover" />
+      <!-- Main Layout: Single Combined Image (Left) & Policy Info (Right) -->
+      <div class="grid grid-cols-1 gap-8 lg:grid-cols-12 lg:items-center">
+        
+        <!-- Left Side: Single Combined Theme Poster Image (7 cols on Desktop) -->
+        <div class="lg:col-span-7">
+          <div class="overflow-hidden rounded-xl border border-gray-100 bg-gray-900 shadow-md transition-shadow hover:shadow-xl">
+            <img 
+              src={theme.src} 
+              alt="ANIMATE 2026 Themes: A World Without, The Day After Tomorrow, One Small Idea" 
+              decoding="async"
+              class="h-auto w-full object-cover"
+            />
+          </div>
+        </div>
 
+        <!-- Right Side: Content & Rules (5 cols on Desktop) -->
+        <div class="flex flex-col justify-center space-y-4 text-sm text-gray-800 lg:col-span-5 lg:pl-4">
+          <p class="leading-relaxed">
+            All three themes are open to both <strong>Synfig Studio</strong> and <strong>Blender</strong> participants.
+          </p>
 
-              <div class="p-4">
-                <h3 class="text-xl font-bold text-purple-700 uppercase mb-2">{theme.title}</h3>
-                <p class="text-gray-700 text-sm">{theme.desc}</p>
-              </div>
-            </div>
-          ))
-        }
+          <p class="leading-relaxed text-gray-700">
+            Make them more story-driven and visually interesting.
+          </p>
+
+          <p class="text-base font-bold text-black">
+            Use AI to imagine. Use Open Source to create.
+          </p>
+
+          <p class="text-gray-600 leading-relaxed">
+            AI may assist with story, ideas, scripts, research and supporting tasks.
+          </p>
+
+          <!-- Icon Bullet Points -->
+          <ul class="space-y-2.5 pt-2 text-xs font-medium text-gray-800 sm:text-sm">
+            <li class="flex items-start gap-2.5">
+              <span class="text-base leading-none">🚫</span>
+              <span>No complete AI generated animations.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="text-base leading-none">🎬</span>
+              <span>Final animation must be created in Synfig Studio or Blender.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="text-base leading-none">📝</span>
+              <span>AI usage must be disclosed.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="text-base leading-none">✂️</span>
+              <span>Creativity and human animation work will be judged.</span>
+            </li>
+          </ul>
+        </div>
+
       </div>
-    </div>
 
-    <!-- Synfig Studio 2D Themes -->
-    <div>
-      <h2 class="justify-end text-4xl mb-4">Synfig Studio 2D Themes</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {
-          synfigThemes.map(theme => (
-            <div class="bg-white rounded-2xl overflow-hidden shadow-lg transition-transform hover:-translate-y-1">
-              {/* <img src={theme.img} alt={theme.title} class="w-full h-48 object-cover" /> */}
-              <img src={theme.img.src} alt={theme.title} class="w-full h-72 object-cover" />
-
-              <div class="p-4">
-                <h3 class="text-xl font-bold text-purple-700 uppercase mb-2">{theme.title}</h3>
-                <p class="text-gray-700 text-sm">{theme.desc}</p>
-              </div>
-            </div>
-          ))
-        }
-      </div>
     </div>
   </section>
 </Main>

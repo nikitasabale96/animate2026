@@ -1,93 +1,108 @@
 ---
 import Main from '../layouts/main.astro';
-import resources from '../images/resources.png';
-import { slide } from 'astro:transitions';
 ---
 
 <Main>
-  
-  <section id="about">
-  
+  <section id="resources" class="bg-white py-12">
+    <div class="mx-auto max-w-6xl px-6">
+      
+      <!-- Section Header -->
+      <div class="mb-10 text-center">
+       <h2 class="text-3xl font-bold text-center text-[#800000ff] mb-8">
+          Helpful Resources for the Hackathon
+        </h2>
+        <p class="mx-auto mt-4 max-w-2xl text-gray-600">
+          The following resources will help you learn the required open-source
+          software and prepare your submission for <strong>ANIMATE 2026</strong>.
+        </p>
+      </div>
 
-    <div class="flex flex-col md:flex-row pt-3 mt-3">
-      <!-- heading on bottom of div -->
-      <div class="w-full md:w-1/2 relative min-h-full">
-        <div class="md:absolute bottom-0">
-        <h1 class="justify-end text-4xl mb-2">Some Helpful Resources for Hackathon:</h1>
-      </div>
-      </div>
-      <div class="w-1/2">
-        <img  src={resources.src} alt="Resources list" decoding="async" width="50%"
-        transition:animate={slide({ duration: '0.6s'})} />
+      <!-- Resource Cards Grid -->
+      <div class="grid gap-6 md:grid-cols-2">
+        
+        <!-- Spoken Tutorials -->
+        <div class="rounded-xl border border-gray-100 bg-white p-6 shadow-sm transition-shadow hover:shadow-md">
+          <h3 class="mb-3 text-xl font-semibold text-[#800000ff]">
+            🎓 Spoken Tutorials
+          </h3>
+          <p class="mb-4 text-gray-700">
+            Learn <strong>Blender</strong> and <strong>Synfig Studio</strong>
+            through Spoken Tutorials. Tutorials are available in:
+          </p>
+          <p class="font-medium text-gray-800">
+            English, Hindi, Kannada, Marathi, Malayalam, Tamil, and Telugu.
+          </p>
+        </div>
+
+        <!-- Supporting Tools -->
+        <div class="rounded-xl border border-gray-100 bg-white p-6 shadow-sm transition-shadow hover:shadow-md">
+          <h3 class="mb-3 text-xl font-semibold text-[#800000ff]">
+            🛠 Supporting Open-Source Tools
+          </h3>
+          <p class="mb-4 text-gray-700">
+            For graphics, audio, and video editing, you may use:
+          </p>
+          <ul class="list-disc space-y-2 pl-5 text-gray-700">
+            <li>GIMP</li>
+            <li>Inkscape</li>
+            <li>Audacity</li>
+            <li>OpenShot Video Editor</li>
+          </ul>
+          <p class="mt-4 text-sm text-gray-600">
+            Spoken Tutorials for these tools are also available in multiple Indian languages.
+          </p>
+        </div>
+
+        <!-- Installation Help -->
+        <div class="rounded-xl border border-gray-100 bg-white p-6 shadow-sm transition-shadow hover:shadow-md">
+          <h3 class="mb-3 text-xl font-semibold text-[#800000ff]">
+            💻 Installation Guides
+          </h3>
+          <ul class="space-y-3 text-gray-700">
+            <li>
+              🔗
+              <a 
+                href="https://www.synfig.org/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="font-medium text-blue-600 hover:underline"
+              >
+                Install Synfig Studio
+              </a>
+            </li>
+            <li>
+              🔗
+              <a 
+                href="https://www.blender.org/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="font-medium text-blue-600 hover:underline"
+              >
+                Install Blender
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Additional Resources -->
+        <div class="rounded-xl border border-gray-100 bg-white p-6 shadow-sm transition-shadow hover:shadow-md">
+          <h3 class="mb-3 text-xl font-semibold text-[#800000ff]">
+            📚 Additional Learning Resources
+          </h3>
+          <ul class="list-disc space-y-3 pl-5 text-gray-700">
+            <li>
+              Learn script writing and storytelling through
+              <strong>Communication Spoken Tutorials</strong>.
+            </li>
+            <li>
+              Explore graphics and creative assets from the
+              <strong>FOCAL (Free and Open Source Creative Art Library)</strong>
+              repository.
+            </li>
+          </ul>
+        </div>
+
       </div>
     </div>
-    
-    <!-- conten -->
-    <div class="mt-4">
-      <div class="pt-3 leading-normal sm:leading-loose">
-      
-        <div class="text-justify md:text-xl text-sm text-base font-[Montserrat], sans-serif mb-5 pb-5">
-          <ul style="list-style:disc;" >
-            
-
-            <div class="mt-4">
-              <div class="pt-4 leading-normal sm:leading-loose">
-                <div class="text-justify md:text-xl text-base font-[Montserrat], sans-serif">
-                  <ul style="list-style: disc;" class="pl-5">
-                    <li class="mb-2">
-                      Self-learn Blender and Synifg studio using                         <span class="hover:text-gray-400 text-purple-700">
-                        <a href="https://spoken-tutorial.org/tutorial-search/?search_foss=Synfig&search_language=" target="_blank">
-                          Spoken Tutorials
-                        </a>
-                      </span>. These tutorials are available in English, Hindi, Kannada, Marathi, Malayalam, Tamil, and Telugu.
-                    </li>
-            
-                    <li class="mb-2">
-                      For creating graphics, recording audio, etc., you can use other software. However, since there is a requirement to strictly use 
-                      <strong>Open Source Software</strong> in this hackathon, you can use GIMP, Audacity, Inkscape, Openshot Video Editor, etc. You can self-learn these software using the Spoken Tutorials, which are freely available in English, Hindi, Kannada, Marathi, Malayalam, Tamil and Telugu.
-                    </li>
-            
-                    <li class="mb-2">
-                      For help in installing Synfig Studio, please 
-                      <a href="https://www.synfig.org/" target="_blank" class="hover:text-gray-400 text-purple-700">
-                        click here
-                      </a>.
-                    </li>
-
-                    <li class="mb-2">
-                      For help in installing Blender Studio, please 
-                      <a href="https://www.blender.org/" target="_blank" class="hover:text-gray-400 text-purple-700">
-                        click here
-                      </a>.
-                    </li>
-            
-                  <!--  <li class="mb-2">
-                      For help in installing Blender Studio, please 
-                      <a href="https://www.blender.org/" target="_blank" class="hover:text-gray-400 text-purple-700">
-                        click here
-                      </a>.
-                    </li>-->
-            
-                    <li class="mb-2">
-                      For writing your script, you can learn about storytelling using 
-                      <a href="https://spoken-tutorial.org/tutorial-search/?search_foss=Communication+Series&search_language=English" target="_blank" class="hover:text-gray-400 text-purple-700">
-                        Communication Spoken Tutorials
-                      </a> available in English.
-                    </li>
-            
-                    <li class="mb-2">
-                      Refer graphics from our 
-                      <a href="https://www.focal.fossee.in/" target="_blank" class="hover:text-gray-400 text-purple-700">
-                        FOCAL (free and open source creative art library)
-                      </a> repository.
-                    </li>
-
-                    
-                  </ul>
-                </div>
-              </div>
-            </div>
-            
-
-            
+  </section>
 </Main>

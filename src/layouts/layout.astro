@@ -1,285 +1,182 @@
 ---
 import navLinks from "./nav-links.json";
 import { slide } from 'astro:transitions';
-import theme from '../images/btn-02-a.png';
-import guide from '../images/btn-03-a.png';
-import result from '../images/btn-04-a.png';
-import logo from '../images/animate-25-logo(1).png';
+import logo from '../images/logo-2026.png';
 import fos from '../images/fossee-logo.png';
 import iit from '../images/IITB-logo.png';
+import calender from '../images/date-icon.png';
 ---
 
-
-
-<div class="relative">
-  <!-- <div id="lightbox" aria-label="lightbox" tab-index="0" role="button"
-    class="z-20 top-0 left-0 w-screen h-screen bg-custom-background opacity-80"
-  >
-  </div> -->
-  <div class="max-w-8xl mx-auto px-0 sm:px-0 md:px-0">
-    <div
-      id="sidebar"
-      class="lg:block hidden fixed z-30 inset-0 transition-all duration-300 w-[25rem] py-4 px-0 justify-center pt-4"
-      style="background:#7836b4ff;"
-    
-    >
-     
-      
-      <!-- style="background: linear-gradient(180deg, rgb(255, 30, 30) 0%, rgb(216, 7, 38) 65%, rgb(255, 59, 108) 100%)""bg-gradient-to-bl from-rose-700 via-red-500 to-rose-500 -->
-    <div class="flex flex-row px-2" style="background-color:#ffff" data-astro-cid-mmggtga4="">
-    <div class="flex items-start w-1/2 float-start" data-astro-cid-mmggtga4="">
-    <a href="https://www.iitb.ac.in/" target="_blank">
-    <img src={iit.src} alt="iitb" decoding="async" data-astro-cid-mmggtga4=""
-    style="width: 150px;">
-    </a>
-    </div>
-    <div class="flex items-end justify-end float-right w-1/2" data-astro-cid-mmggtga4="">
-    <a href="https://fossee.in" target="_blank">
-    <img class=" float-right" src={fos.src} alt="fossee" decoding="async" data-astro-cid-mmggtga4="" 
-    style="width: 150px;">
-    </a>
-    </div>
-    </div>
- <div class="flex flex-col items-center text-center py-8 px-4 bg-[#7836b4ff] text-white">
-      <!-- Top Heading -->
-      <h2 class="text-3xl md:text-3xl font-bold mb-2">FOSSEE, &nbsp;IIT BOMBAY</h2>
-    
-      <!-- Subheading -->
-      <p class="text-xl md:text-2xl font-bold mb-3">Presents</p>
-    
-</div>
-              <div class="px-5 pt-5 flex flex-row align-items-center justify-center pb-2">
-        <img  src={logo.src} style="width:85%;" alt="ANIMATE 2025" decoding="async" />
-      </div>
-   
-       <!-- <div class="row-span-1 pt-4 flex items-center justify-center"><ul>
-        <li class="text-purple-600"><a href="/register" class="flex-1 border-indigo-600 items-center justify-center rounded-md overflow-hidden">
-     -->
-         
-      <!-- REGISTER LINK -->
-<!-- <div class="flex justify-center">
+<div class="relative min-h-screen bg-white">
   
+  <!-- Left Sidebar Layout -->
+  <div
+    id="sidebar"
+    class="fixed inset-y-0 left-0 z-30 hidden w-[25rem] flex-col justify-between bg-[#dde9af] py-6 px-6 lg:flex"
+  >
+    <div class="flex flex-col items-center">
+      <!-- Header Logos -->
+      <div class="flex w-full items-center justify-between rounded-lg bg-white px-4 py-3 shadow-sm">
+        <a href="https://www.iitb.ac.in/" target="_blank" rel="noopener noreferrer">
+          <img src={iit.src} alt="IIT Bombay Logo" decoding="async" style="width: 150px;" class="object-contain" />
+        </a>
+        <a href="https://fossee.in" target="_blank" rel="noopener noreferrer">
+          <img src={fos.src} alt="FOSSEE Logo" decoding="async" style="width: 150px;" class="object-contain" />
+        </a>
+      </div>
 
- <a href="/register"
-   class="relative inline-block px-6 py-3 font-bold text-white border border-yellow-400
-    rounded-lg overflow-hidden transition duration-300 ease-in-out mt-10"
-   style="
-     background: rgba(255, 255, 255, 0.05);
-     box-shadow:
-       0 0 10px rgba(255, 255, 0, 0.8),
-       0 0 20px rgba(255, 255, 0, 0.5),
-       inset 0 0 5px rgba(255, 255, 255, 0.1);
-     backdrop-filter: blur(4px);
-     text-shadow: 0 0 8px rgba(255, 255, 0, 1);
-     color: white;
-   "
-   onmouseover="
-     this.style.boxShadow='0 0 20px rgba(128,0,128,1), 0 0 40px rgba(128,0,128,0.8), inset 0 0 10px rgba(128,0,128,0.4)';
-     this.style.textShadow='0 0 12px rgba(186,85,211,1)';
-     this.style.color='violet';
-     this.style.borderColor='violet';
-   "
-   onmouseout="
-     this.style.boxShadow='0 0 10px rgba(255,255,0,0.8), 0 0 20px rgba(255,255,0,0.5), inset 0 0 5px rgba(255,255,255,0.1)';
-     this.style.textShadow='0 0 8px rgba(255,255,0,1)';
-     this.style.color='white';
-     this.style.borderColor='rgba(255,255,0,0.7)';
-   "
->
-  Register
-        </a></li>
-      </ul>
-     
-    </div>  -->
-        <div class="grid grid-rows-4 sm:grid-rows-4 pt-4">
-          <div class="row-span-1">
-            <div class="flex items-center justify-center flex-col gap-3 min-[500px]:flex-row">
-              <div class="dates items-center" style="color:#9e6320">
-                
-              </div>
-            </div>
-            </div>
-          </div>
-          <!-- <div class="w-full flex flex-col justify-center items-center py-4">
-            <p class="text-xl md:text-2xl font-bold mb-3 animate-pulse text-white">
-              Registrations Closed
-            </p>
-            
-            <p class="text-yellow-300 text-center font-semibold text-base font-[Montserrat], sans-serif">
-              Submission date is extended to <br />
-              <span class="text-xl md:text-2xl font-bold mb-3 animate-pulse text-white">
-                15th August 2025
-              </span>
-            </p>
-          </div> -->
-            
+      <!-- Sidebar Heading -->
+      <div class="mt-6 text-center text-[#800000ff]">
+        <h2 class="text-2xl font-bold uppercase tracking-wide">FOSSEE, IIT BOMBAY</h2>
+        <p class="text-xl font-semibold italic">Presents</p>
+      </div>
+
+      <!-- ANIMATE Logo -->
+      <div class="mt-6 flex justify-center">
+        <img src={logo.src} style="width: 85%;" alt="ANIMATE 2026" decoding="async" />
+      </div>
+
+      <!-- Registration Dates with Calendar Icon -->
+      <div class="mt-12 flex flex-col items-center gap-3">
+        <img src={calender.src} alt="Calendar Icon" decoding="async" class="h-14 w-14 object-contain" />
+        
+        <div class="text-center text-xl font-medium text-[#800000ff] space-y-1">
+          <p>Last date of registration: <strong class="text-[#800000ff]">10 Sept 2026</strong></p>
+          <p>Last date of submission: <strong class="text-[#800000ff]">30 Sept 2026</strong></p>
         </div>
-          
-      
-   
+      </div>
 
-    <main class="pl-0 lg:pl-[25rem] ">
-     
-      <!-- <div class="mx-auto px-0 sm:px-4 lg:px-16 py-8 max-w-none xl:ml-0 xl:mr-[0rem]">   -->
-        <div class="flex items-end justify-end">  
-         
-<nav class="float-end mb-3 pb-2">
-  <div class="mx-auto px-4 lg:px-16 pt-4 max-w-none xl:ml-0 xl:mr-[0rem] ">
-      <button class='inline-flex items-center justify-center md:hidden' data-collapse-toggle="main-navigation" type="button" aria-controls="main-navigation" aria-expanded="false">
-        <span class="sr-only">Open main menu</span>
-        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
-        </svg>
-    </button>
-    <div class="hidden w-full items-end md:block menu-item" id="main-navigation">
-      <ul class="menu items-end justify-end bebas-neue-regular">
-        {
-          navLinks.map((link) => {
-            const { label, href } = link;
-
-            return (
-              <li>
-                {/* </li>a class="nav-link text-purple-600 hover:text-purple-600 transition duration-300" href={href}>{label}</a> */}
-             
-<a
-  class={`nav-link text-purple-600 hover:text-purple-600 transition duration-300 ${
-    label === "Awards" || label === "Results" ? "award-result" : ""
-  }`}
-  href={href}
->
-  {label}
-</a>
-
- 
-
-              </li>
-            );
-          })
-        }
-      </ul>
-      
+      <!-- Call To Action -->
+      <div class="mt-6 flex justify-center">
+        <a 
+          href="/register" 
+          class="inline-block rounded-md bg-[#38a169] px-8 py-2.5 text-xl font-bold text-white shadow-md transition-transform duration-200 hover:scale-105 hover:bg-[#2f855a]"
+        >
+          Register
+        </a>
+      </div>
     </div>
   </div>
-</nav>
-</div>
-      
-  <!-- </div> -->
 
-    <div class="mx-auto px-4 lg:px-16 max-w-none xl:ml-0 xl:mr-[0rem]"
-    transition:animate={slide({ duration: '0.4s' })}>
-        <slot />
+  <!-- Main Content Wrapper -->
+  <div class="pl-0 lg:pl-[25rem]">
+    
+    <!-- Top Horizontal Navigation Bar -->
+    <header class="sticky top-0 z-20 w-full bg-[#e2e0f4] shadow-sm">
+      <div class="mx-auto max-w-7xl px-4 py-7 ">
+        
+        <!-- Mobile Menu Toggle Button -->
+        <div class="flex items-center justify-between md:hidden">
+          <span class="font-bold text-[#800000ff]">ANIMATE 2026</span>
+          <button 
+            id="mobile-menu-btn"
+            type="button" 
+            class="rounded-md p-2 text-[#800000ff] hover:bg-[#d0ccf0] focus:outline-none"
+            aria-label="Toggle Navigation"
+          >
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Links Container -->
+        <nav id="main-navigation" class="hidden md:flex md:items-center md:justify-center">
+          <ul class="flex flex-wrap items-center justify-center gap-6 lg:gap-10">
+            {
+              navLinks.map((link) => {
+                const { label, href } = link;
+                return (
+                  <li>
+                    <a
+                      href={href}
+                      class="nav-link relative px-3 py-1.5 text-base font-semibold text-[#800000ff] underline underline-offset-4 transition-colors hover:text-[#5a0000]"
+                    >
+                      {label}
+                    </a>
+                  </li>
+                );
+              })
+            }
+          </ul>
+        </nav>
+
+        <!-- Mobile Navigation Menu Dropdown -->
+        <nav id="mobile-navigation" class="hidden pt-3 md:hidden">
+          <ul class="flex flex-col gap-2 pb-2">
+            {
+              navLinks.map((link) => {
+                const { label, href } = link;
+                return (
+                  <li>
+                    <a
+                      href={href}
+                      class="nav-link block rounded-md px-3 py-2 text-base font-semibold text-[#800000ff] hover:bg-[#d0ccf0]"
+                    >
+                      {label}
+                    </a>
+                  </li>
+                );
+              })
+            }
+          </ul>
+        </nav>
+
       </div>
+    </header>
+
+    <!-- Page Content Slot -->
+    <main class="p-6 md:p-10" transition:animate={slide({ duration: '0.4s' })}>
+      <slot />
     </main>
   </div>
+
 </div>
+
+<!-- Active Tab Styling & Router Logic -->
 <style>
-  nav,
-  ul {
-    margin-bottom: 5px;
-    display: inline-block;
-    font-size: larger;
-
+  /* Active menu tab style matching the reference image active highlight box */
+  .nav-link.active {
+    background-color: #cbbece !important;
+    color: #800000ff !important;
+    font-weight: 700 !important;
+    border-radius: 4px;
+    text-decoration: underline !important;
   }
-
-  ul.menu li {
-    display: inline-block;
-    border-right: 2px solid rgb(115, 31, 249);
-    border-style: inset;
-    list-style: none;
-    padding: 0px 8px;
-  }
-
-  @media only screen and (max-width: 600px;) {
-    nav,
-  ul {
-    display:block;
-  }
-
-  ul.menu li {
-    display:block;
-  }
-  }
-  ul.menu li a{
-  text-decoration: none;
-  color:#6c5353;
-}
-ul.menu li:hover{
-color: #7836b4ff;
-/* background-color: purple; */
-  }
-ul.menu li a:hover{
-  color:#7836b4ff;
-}
-.menu-item a.active{
-  color:#7836b4ff!important;
-  /* background-color: blue; */
-}
-ul.menu li:last-child{  
-  border-right: none;
-}
-/* ul.menu li:hover, */
-/* a.active {color: aqua;} */
-ul.menu li a.active{
-  color:#7836b4ff;
-}
-./* Highlight Award & Result without affecting layout */
-/* Highlight Award & Result without affecting layout */
-ul.menu li a.award-result {
-  color: red !important;
-  font-weight: bold !important;
-}
-
-ul.menu li a.award-result:hover {
-  color: red !important;
-}
-
-
-/* Minimal override — only changes color for Award & Result, no layout changes */
-/* Highlight Awards & Results Only */
-.nav-link.award-result {
-  color: red !important;
-  font-weight: 600 !important;
-}
-
-.nav-link.award-result:hover,
-.nav-link.award-result.active {
-  color: red !important;
-}
-
-
 </style>
 
 <script>
- 
- document.addEventListener('astro:page-load', () => {
-if(window.location.hash){
-var currentUrl = window.location.pathname.replace(/\/+$/, '') + window.location.hash.replace(/\/+$/, '');
-}
-else{
+  function handleActiveNav() {
+    const currentPath = window.location.pathname.replace(/\/+$/, '') || '/';
+    const currentHash = window.location.hash;
+    const fullUrl = currentPath + currentHash;
 
-  var currentUrl = window.location.pathname.replace(/\/+$/, '');
-}
+    const navLinks = document.querySelectorAll('.nav-link');
 
+    navLinks.forEach((link) => {
+      const href = link.getAttribute('href');
+      if (href === fullUrl || href === currentPath) {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
+      }
+    });
+  }
 
-  var menuItems = document.querySelectorAll('.nav-link');
+  // Mobile menu toggle
+  function setupMobileMenu() {
+    const btn = document.getElementById('mobile-menu-btn');
+    const mobileNav = document.getElementById('mobile-navigation');
 
-console.log(currentUrl);
-  menuItems.forEach(function(item) {
-   
-    var menuItemUrl = item.getAttribute('href');
-console.log(menuItemUrl);
-    // Check if the current URL matches the menu item's href
-    if (currentUrl === menuItemUrl) {
-      // Add the 'active' class to the matching menu item
-      item.classList.add('active');
-    } else {
-      // Remove the 'active' class from other menu items
-      item.classList.remove('active');
+    if (btn && mobileNav) {
+      btn.addEventListener('click', () => {
+        mobileNav.classList.toggle('hidden');
+      });
     }
+  }
+
+  document.addEventListener('astro:page-load', () => {
+    handleActiveNav();
+    setupMobileMenu();
   });
-
- });
-
-
-
 </script>

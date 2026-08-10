@@ -1,46 +1,272 @@
 ---
 import Main from '../layouts/main.astro';
-
-import { slide } from 'astro:transitions';
 ---
 
 <Main>
-  <section id="rules">
-  
-
-    <div class="flex flex-col md:flex-row pt-5 mt-3">
-      <!-- heading on bottom of div -->
-      <div class="w-full relative min-h-full">
-        <div class="md:absolute bottom-0">
-        <h1 class="justify-end text-4xl mb-4">Rules and Regulations</h1>
-      </div>
-      </div>
-      <!-- <div class="w-1/2">
-        <img  src={eligibility.src} alt="WELCOM TO SYNFIG STUDIO HACKATHON" decoding="async" 
-        transition:animate={slide({ duration: '0.6s', delay: '1s' , direction: 'backward'})} />
-      </div> -->
-    </div>
-    
-    <!-- conten -->
-    <div class="mt-4">
-      <div class="pt-4 leading-normal sm:leading-loose">
+  <section id="rules" class="bg-white py-12">
+    <div class="mx-auto max-w-6xl px-6">
       
-        <div class="text-justify md:text-xl text-base font-[Montserrat], sans-serif"><ul style="list-style:disc;">
-            <!-- <li class="mb-2">The decision of the review committee and organizers in declaring the results will be final. No queries in this regard will be entertained.</li> -->
-            <li class="mb-2">The same person can not participate in more than one team.</li>
-            <li class="mb-2">If a person is found participating in more than one team, both teams will be disqualified from the Hackathon.</li>
-            <li class="mb-2">Use only Synfig Studio for creating 2D animations and Blender for creating 3D animations. Create the supporting graphics, audio, etc. using only open source software. You are not allowed to use any proprietary software in your animation in any aspect. If found, you or your team will be disqualified.</li>
-            <li class="mb-2">You can choose to narrate in <span class="text-3xl text-purple-700">English</span> or in the <span class="text-3xl text-purple-700">22 scheduled Indian languages</span> given below.<br><span class="text-lg">(1) Assamese, (2) Bengali, (3) Gujarati, (4) Hindi, (5) Kannada, (6) Kashmiri, (7) Konkani, (8) Malayalam, (9) Manipuri, (10) Marathi, (11) Nepali, (12) Oriya, (13) Punjabi, (14) Sanskrit, (15) Sindhi, (16) Tamil, (17) Telugu, (18) Urdu (19) Bodo, (20) Santhali, (21) Maithili and (22) Dogri.</span></li>
-            <li class="mb-2">The team lead will be the only point of contact with the organizers. Any participant found to be indulging in any form of malpractice will be immediately disqualified.</li>
-            <li class="mb-2">The decision of the review committee and organizers in declaring the results will be final. No queries in this regard will be entertained.
+      <!-- Section Header -->
+      <div class="mb-8 text-center">
+        <h2 class="text-3xl font-bold text-center text-[#800000ff] mb-8">
+          Important Rules & Submission Guidelines
+        </h2>
+        <p class="mt-2 text-gray-600">
+          ANIMATE 2026 — AI & Software Usage Policy
+        </p>
+      </div>
+
+      <!-- Tab Buttons Navigation -->
+      <div class="mb-8 flex flex-wrap justify-center gap-2 border-b border-gray-200 pb-4">
+        <button
+          class="tab-btn active-tab rounded-lg px-5 py-2.5 text-sm font-semibold transition-all"
+          data-tab="tab-1"
+        >
+          Rules & Regulations
+        </button>
+        <button
+          class="tab-btn inactive-tab rounded-lg px-5 py-2.5 text-sm font-semibold transition-all"
+          data-tab="tab-2"
+        >
+          AI Usage Policy
+        </button>
+        <button
+          class="tab-btn inactive-tab rounded-lg px-5 py-2.5 text-sm font-semibold transition-all"
+          data-tab="tab-3"
+        >
+          Open Source Software Policy
+        </button>
+        <button
+          class="tab-btn inactive-tab rounded-lg px-5 py-2.5 text-sm font-semibold transition-all"
+          data-tab="tab-4"
+        >
+          Submission Guidelines
+        </button>
+      </div>
+
+      <!-- Tab Content Area -->
+      <div class="rounded-xl border border-gray-100 bg-white p-6 shadow-sm md:p-8">
+        
+        <!-- Tab 1: Rules & Regulations (Default Open) -->
+        <div id="tab-1" class="tab-content block space-y-4 text-gray-700">
+          <h2 class="text-2xl font-bold text-[#800000ff]">1. General Rules</h2>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-3">
+              <span class="font-bold text-[#800000ff]">•</span>
+              <span>A participant may register and participate in only one team. If a participant is found participating in more than one team, all teams involved will be disqualified.</span>
             </li>
-            <li class="mb-2">The accepted submissions shall be released and published under open source license in the public domain. The copyright should be transferred to the FOSSEE project.</li>
-            </ul>
+            <li class="flex items-start gap-3">
+              <span class="font-bold text-[#800000ff]">•</span>
+              <span>Each team must nominate one Team Lead, who will be the sole point of contact with the organizers.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="font-bold text-[#800000ff]">•</span>
+              <span>Any form of malpractice, plagiarism, misrepresentation, or violation of the hackathon rules will result in immediate disqualification.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="font-bold text-[#800000ff]">•</span>
+              <span>Participants must submit original work created specifically for ANIMATE 2026. Previously submitted or copyrighted work may not be submitted without appropriate permission.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="font-bold text-[#800000ff]">•</span>
+              <span>Participants may narrate their animation in English or any of the 22 scheduled Indian languages: Assamese, Bengali, Gujarati, Hindi, Kannada, Kashmiri, Konkani, Malayalam, Manipuri, Marathi, Nepali, Odia, Punjabi, Sanskrit, Sindhi, Tamil, Telugu, Urdu, Bodo, Santhali, Maithili, and Dogri.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="font-bold text-[#800000ff]">•</span>
+              <span>The decision of the Review Committee and Organizers regarding eligibility, evaluation, disqualification, and final results shall be final.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="font-bold text-[#800000ff]">•</span>
+              <span>Submission of an entry constitutes acceptance of these rules and regulations.</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Tab 2: AI Usage Policy -->
+        <div id="tab-2" class="tab-content hidden space-y-4 text-gray-700">
+          <h2 class="text-2xl font-bold text-[#800000ff]">AI Usage Policy</h2>
+          <p class="font-semibold text-gray-900 italic">"AI may assist. Humans must create."</p>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-3">
+              <span class="font-bold text-[#800000ff]">•</span>
+              <span>AI tools may be used for story development, brainstorming, scripting, research, translation, planning, concept art, voice, or minor texture generation.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="font-bold text-[#800000ff]">•</span>
+              <span>AI may be used as a creative assistant, but it must not create the complete final animation. Core animation, rigging, and storytelling must be manually created.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="font-bold text-[#800000ff]">•</span>
+              <span>AI-generated video or complete AI-generated animation may not be submitted as the final work.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="font-bold text-[#800000ff]">•</span>
+              <span>The actual animation must be created by the participant using Synfig Studio for 2D animation and/or Blender for 2D/3D animation.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="font-bold text-[#800000ff]">•</span>
+              <span>Participants must disclose any AI tools used and explain their purpose in the AI Usage Declaration submitted with the project form.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="font-bold text-[#800000ff]">•</span>
+              <span>Failure to disclose significant AI use or submitting substantially AI-generated animation as participant-created work may result in disqualification.</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Tab 3: Open Source Software Policy -->
+        <div id="tab-3" class="tab-content hidden space-y-4 text-gray-700">
+          <h2 class="text-2xl font-bold text-[#800000ff]">Open Source Software Policy</h2>
+          <p>Only Free and Open Source Software (FOSS) may be used to create the animation and its supporting content.</p>
+          
+          <div class="grid gap-4 md:grid-cols-2 my-4">
+            <div class="rounded-lg bg-gray-50 p-4 border border-gray-100">
+              <h3 class="font-semibold text-gray-900 mb-2">Primary Software</h3>
+              <ul class="list-disc pl-5 space-y-1">
+                <li><strong>Synfig Studio</strong> (2D Animation)</li>
+                <li><strong>Blender</strong> (3D & 2D Animation, Compositing)</li>
+              </ul>
+            </div>
+            
+            <div class="rounded-lg bg-gray-50 p-4 border border-gray-100">
+              <h3 class="font-semibold text-gray-900 mb-2">Supporting Tools</h3>
+              <ul class="list-disc pl-5 space-y-1">
+                <li><strong>Inkscape</strong> — Vector graphics</li>
+                <li><strong>GIMP</strong> — Image editing</li>
+                <li><strong>Audacity</strong> — Audio editing</li>
+                <li><strong>OpenShot / Blender</strong> — Video editing</li>
+                <li><strong>Scribus</strong> — Layout & documentation</li>
+              </ul>
+            </div>
           </div>
+
+          <ul class="space-y-3">
+            <li class="flex items-start gap-3">
+              <span class="font-bold text-[#800000ff]">•</span>
+              <span>Participants must not use proprietary software for any part of the creative production workflow.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="font-bold text-[#800000ff]">•</span>
+              <span>Use of proprietary software where it materially contributes to the submitted work may result in disqualification.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="font-bold text-[#800000ff]">•</span>
+              <span>Participants may be asked to provide source/project files to verify the software and production workflow.</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Tab 4: Submission Guidelines & Evaluation -->
+        <div id="tab-4" class="tab-content hidden space-y-6 text-gray-700">
+          <div>
+            <h2 class="text-2xl font-bold text-[#800000ff] mb-4">Submission Guidelines</h2>
+            
+            <div class="grid gap-6 md:grid-cols-2">
+              <!-- Final Video Requirements -->
+              <div class="rounded-lg border border-gray-100 p-4 bg-gray-50">
+                <h3 class="font-bold text-gray-900 mb-2 text-lg">📹 Final Video Specification</h3>
+                <ul class="space-y-1 text-sm">
+                  <li><strong>Duration:</strong> 3 minutes ± 10 seconds</li>
+                  <li><strong>Frame rate:</strong> 24 / 30 FPS</li>
+                  <li><strong>Format:</strong> .mp4 or .avi</li>
+                  <li><strong>Resolution:</strong> 1920 × 1080 px (Full HD)</li>
+                  <li><strong>Orientation:</strong> 16:9 landscape</li>
+                  <li><strong>Audio:</strong> Stereo, synchronized with animation</li>
+                  <li><strong>Narration:</strong> Original voice or credited AI-assisted narration</li>
+                </ul>
+              </div>
+
+              <!-- Source Files Requirements -->
+              <div class="rounded-lg border border-gray-100 p-4 bg-gray-50">
+                <h3 class="font-bold text-gray-900 mb-2 text-lg">📁 Editable Source Files</h3>
+                <p class="text-sm mb-2">Must submit relevant files used in production:</p>
+                <ul class="list-disc pl-5 space-y-1 text-sm">
+                  <li><code class="text-xs bg-gray-200 px-1 rounded">.sifz</code> Synfig project files</li>
+                  <li><code class="text-xs bg-gray-200 px-1 rounded">.blend</code> Blender project files</li>
+                  <li><code class="text-xs bg-gray-200 px-1 rounded">.svg</code> Inkscape files</li>
+                  <li><code class="text-xs bg-gray-200 px-1 rounded">.xcf</code> GIMP files</li>
+                  <li><code class="text-xs bg-gray-200 px-1 rounded">.aup3 / .wav</code> Audacity files</li>
+                  <li>OpenShot project files</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Evaluation Criteria -->
+          <div class="border-t border-gray-200 pt-4">
+            <h3 class="text-xl font-bold text-[#800000ff] mb-3">⚖️ Evaluation Criteria</h3>
+            <div class="grid grid-cols-2 gap-4 sm:grid-cols-4 text-center">
+              <div class="p-3 bg-red-50 rounded-lg border border-red-100">
+                <div class="text-2xl font-extrabold text-[#800000ff]">30%</div>
+                <div class="text-xs font-semibold text-gray-700 mt-1">Creativity</div>
+              </div>
+              <div class="p-3 bg-red-50 rounded-lg border border-red-100">
+                <div class="text-2xl font-extrabold text-[#800000ff]">30%</div>
+                <div class="text-xs font-semibold text-gray-700 mt-1">Technical Skill</div>
+              </div>
+              <div class="p-3 bg-red-50 rounded-lg border border-red-100">
+                <div class="text-2xl font-extrabold text-[#800000ff]">25%</div>
+                <div class="text-xs font-semibold text-gray-700 mt-1">Storytelling</div>
+              </div>
+              <div class="p-3 bg-red-50 rounded-lg border border-red-100">
+                <div class="text-2xl font-extrabold text-[#800000ff]">15%</div>
+                <div class="text-xs font-semibold text-gray-700 mt-1">Responsible AI Use</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
       </div>
     </div>
-</section>
+  </section>
 </Main>
 
+<!-- Custom Styling & Tab Switching Script -->
+<style>
+  .active-tab {
+    background-color: #800000ff;
+    color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  .inactive-tab {
+    background-color: #f3f4f6;
+    color: #374151;
+  }
+  .inactive-tab:hover {
+    background-color: #e5e7eb;
+    color: #111827;
+  }
+</style>
 
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const tabButtons = document.querySelectorAll('.tab-btn');
+    const tabContents = document.querySelectorAll('.tab-content');
 
+    tabButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        const targetTab = button.getAttribute('data-tab');
+
+        // Toggle active states on buttons
+        tabButtons.forEach((btn) => {
+          btn.classList.remove('active-tab');
+          btn.classList.add('inactive-tab');
+        });
+        button.classList.add('active-tab');
+        button.classList.remove('inactive-tab');
+
+        // Toggle tab content visibility
+        tabContents.forEach((content) => {
+          if (content.id === targetTab) {
+            content.classList.remove('hidden');
+            content.classList.add('block');
+          } else {
+            content.classList.add('hidden');
+            content.classList.remove('block');
+          }
+        });
+      });
+    });
+  });
+</script>

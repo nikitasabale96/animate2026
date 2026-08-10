@@ -25,20 +25,18 @@ import '@astrojs/tailwind/base.css';
       <!-- back to home -->
       
     </Layout>
-    <div class="absolute z-10">
-    <div class="!fixed bottom-5 end-5 rounded-full bg-purple-500 m-3 p-3 text-xs font-medium uppercase leading-tight 
-    text-white shadow-md transition duration-300 ease-in-out hover:bg-yellow-600 hover:shadow-lg "
+<div class="fixed bottom-5 end-5 z-50">
+  <div class="m-3 rounded-full bg-[#44aa00ff] p-3 text-xs font-medium uppercase leading-tight text-white shadow-md transition-colors duration-300 ease-in-out hover:bg-[#800000ff] hover:shadow-lg">
+    <a 
+      href="/"
+      type="button"
+      data-twe-ripple-init
+      data-twe-ripple-color="light"
+      class="flex items-center justify-center focus:outline-none"
+      aria-label="Home"
     >
-
-        <a href="/"
-        type="button"
-        data-twe-ripple-init
-        data-twe-ripple-color="light"
-        class="focus:bg-purple-600 focus:shadow-lg focus:outline-none  focus:ring-0 active:bg-blue-800 active:shadow-lg"
-       
-        ><i class="far fa-home text-white-600 text-3xl z-10 hover:animate-bounce duration-700 ease-in-out"></i>
-      </a>
-    </div>
+      <i class="far fa-home text-3xl text-white transition-transform hover:animate-bounce duration-700 ease-in-out"></i>
+    </a>
   </div>
-  </body>
+</div>  </body>
 </html>

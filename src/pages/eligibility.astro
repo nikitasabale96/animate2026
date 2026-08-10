@@ -5,38 +5,69 @@ import { slide } from 'astro:transitions';
 ---
 
 <Main>
-  <section id="eligibility">
-  
-
-    <div class="flex flex-col md:flex-row pt-3 mt-3">
-      <!-- heading on bottom of div -->
-      <div class="w-full md:w-1/2 relative min-h-full">
-        <div class="md:absolute bottom-0">
-        <h1 class="justify-end text-4xl mb-4">Eligibility to participate:</h1>
-      </div>
-      </div>
-      <div class="w-1/2">
-        <img  src={eligibility.src} alt="WELCOM TO SYNFIG STUDIO HACKATHON" decoding="async"
-        transition:animate={slide({ duration: '0.6s'})} />
-      </div>
-    </div>
-    
-    <!-- conten -->
-    <div class="mt-4">
-      <div class="pt-4 leading-normal sm:leading-loose">
+  <section id="eligibility" class="bg-white py-12">
+    <div class="mx-auto max-w-6xl px-6">
       
-        <div class="text-justify md:text-2xl text-sm font-[Montserrat], sans-serif"><ul style="list-style:disc;" class="list-inside">
-            <li>The hackathon is open to all.</li>
-            <li>Participate as an individual or as a team (max. 4 members).</li>
-            <li>High school/college students, faculty, professionals (animators, designers etc.) from any field who are interested in creating animations.</li>
-            <li>Knowledge of basic graphics, designing and animation is required.</li>
-            <li>Prior knowledge of using Synfig Studio to create 2D animation is expected. If you are self motivated and want to participate you can self learn Synfig Studio using <a href="spoken-tutorial.org">Spoken tutorials</a>. These are available in English, Hindi, Kannada, Marathi, Malayalam, Tamil and Telugu.</li>
-            </ul>
-          </div>
+      <!-- Top Grid: Heading & Image -->
+      <div class="grid items-center gap-8 md:grid-cols-2">
+        <div class="flex items-center">
+          <h2 class="text-3xl font-bold text-center text-[#800000ff] mb-8">
+            Eligibility to Participate
+          </h2>
+        </div>
+        <div class="flex justify-center md:justify-end">
+          <img 
+            src={eligibility.src} 
+            alt="Welcome to Synfig Studio Hackathon" 
+            decoding="async"
+            class="max-h-64 w-auto object-contain"
+            transition:animate={slide({ duration: '0.6s' })} 
+          />
+        </div>
       </div>
+
+      <!-- Content Card -->
+      <div class="mt-8 rounded-xl border border-gray-100 bg-white p-6 shadow-sm">
+        <ul class="space-y-4 text-gray-700">
+          <li class="flex items-start gap-3">
+            <span class="text-[#800000ff]">•</span>
+            <span>The hackathon is open to all.</span>
+          </li>
+          
+          <li class="flex items-start gap-3">
+            <span class="text-[#800000ff]">•</span>
+            <span>Participate as an individual or as a team (max. 4 members).</span>
+          </li>
+          
+          <li class="flex items-start gap-3">
+            <span class="text-[#800000ff]">•</span>
+            <span>High school/college students, faculty, and professionals (animators, designers, etc.) from any field who are interested in creating animations.</span>
+          </li>
+          
+          <li class="flex items-start gap-3">
+            <span class="text-[#800000ff]">•</span>
+            <span>Knowledge of basic graphics, designing, and animation is required.</span>
+          </li>
+          
+          <li class="flex items-start gap-3">
+            <span class="text-[#800000ff]">•</span>
+            <span>
+              Prior knowledge of using Synfig Studio to create 2D animation is expected. If you are self-motivated and want to participate, you can learn Synfig Studio using 
+              <a 
+                href="https://spoken-tutorial.org" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="font-medium text-blue-600 hover:underline"
+              >
+                Spoken Tutorials
+              </a>. 
+              These are available in English, Hindi, Kannada, Marathi, Malayalam, Tamil, and Telugu.
+            </span>
+          </li>
+        </ul>
+      </div>
+
     </div>
-</section>
+  </section>
+  
 </Main>
-
-
-
