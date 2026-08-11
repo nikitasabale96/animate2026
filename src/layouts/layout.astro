@@ -7,8 +7,8 @@ import iit from '../images/IITB-logo.png';
 import calender from '../images/date-icon.png';
 ---
 
-<div class="relative min-h-screen bg-white">
-  
+<!-- <div class="relative min-h-screen bg-white"> -->
+  <div class="relative min-h-screen bg-[#dde9af] lg:bg-white">
   <!-- Left Sidebar Container (Off-canvas Drawer on Mobile / Fixed Sidebar on Desktop) -->
   <aside
     id="sidebar"
@@ -62,16 +62,18 @@ import calender from '../images/date-icon.png';
       </div>
 
       <!-- Call To Action -->
-      <div class="mt-6 flex justify-center">
+<!-- Responsive Solid Register Button -->
+<!-- Register Button -->
+      <div class="mt-6 flex justify-center w-full px-4">
         <a 
           href="/register" 
-          class="inline-block rounded-md bg-[#38a169] px-8 py-2.5 text-xl font-bold text-white shadow-md transition-transform duration-200 hover:scale-105 hover:bg-[#2f855a]"
+          class="inline-flex items-center justify-center w-full sm:w-auto rounded-md bg-[#38a169] px-8 py-2.5 text-xl font-bold text-white shadow-md transition-all duration-200 hover:scale-105 hover:bg-[#2f855a] active:scale-95"
         >
           Register
         </a>
       </div>
     </div>
-  </aside>
+    </aside>
 
   <!-- Dark Overlay for Mobile Sidebar -->
   <div 
