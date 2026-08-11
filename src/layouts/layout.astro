@@ -9,12 +9,27 @@ import calender from '../images/date-icon.png';
 
 <div class="relative min-h-screen bg-white">
   
-  <!-- Left Sidebar Layout -->
-  <div
+  <!-- Left Sidebar Container (Off-canvas Drawer on Mobile / Fixed Sidebar on Desktop) -->
+  <aside
     id="sidebar"
-    class="fixed inset-y-0 left-0 z-30 hidden w-[25rem] flex-col justify-between bg-[#dde9af] py-6 px-6 lg:flex"
-  >
+    class="fixed inset-y-0 left-0 z-40 w-full sm:w-[25rem] flex-col justify-between bg-[#dde9af] py-6 px-6 transition-transform duration-300 ease-in-out -translate-x-full lg:translate-x-0 lg:flex"
+  >  
     <div class="flex flex-col items-center">
+      
+      <!-- Close Button for Mobile Drawer -->
+      <div class="flex w-full justify-end lg:hidden">
+        <button
+          id="close-sidebar-btn"
+          type="button"
+          class="rounded-md p-2 text-[#800000ff] hover:bg-[#c9d897] focus:outline-none"
+          aria-label="Close Sidebar"
+        >
+          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
       <!-- Header Logos -->
       <div class="flex w-full items-center justify-between rounded-lg bg-white px-4 py-3 shadow-sm">
         <a href="https://www.iitb.ac.in/" target="_blank" rel="noopener noreferrer">
@@ -56,18 +71,39 @@ import calender from '../images/date-icon.png';
         </a>
       </div>
     </div>
-  </div>
+  </aside>
+
+  <!-- Dark Overlay for Mobile Sidebar -->
+  <div 
+    id="sidebar-overlay" 
+    class="fixed inset-0 z-30 hidden bg-black/50 transition-opacity lg:hidden"
+  ></div>
 
   <!-- Main Content Wrapper -->
   <div class="pl-0 lg:pl-[25rem]">
     
-    <!-- Top Horizontal Navigation Bar -->
+    <!-- Top Horizontal Navigation Bar (Preserved #e2e0f4 Background) -->
     <header class="sticky top-0 z-20 w-full bg-[#e2e0f4] shadow-sm">
-      <div class="mx-auto max-w-7xl px-4 py-7 ">
+      <div class="mx-auto max-w-7xl px-4 py-4 md:py-7">
         
-        <!-- Mobile Menu Toggle Button -->
+        <!-- Mobile Navigation Header -->
         <div class="flex items-center justify-between md:hidden">
+          
+          <!-- Toggle Sidebar Info Drawer -->
+          <button 
+            id="mobile-sidebar-toggle-btn"
+            type="button" 
+            class="rounded-md p-2 text-[#800000ff] hover:bg-[#d0ccf0] focus:outline-none"
+            aria-label="Open Sidebar Info"
+          >
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </button>
+
           <span class="font-bold text-[#800000ff]">ANIMATE 2026</span>
+
+          <!-- Toggle Navigation Links -->
           <button 
             id="mobile-menu-btn"
             type="button" 
@@ -80,7 +116,7 @@ import calender from '../images/date-icon.png';
           </button>
         </div>
 
-        <!-- Links Container -->
+        <!-- Links Container (Desktop) -->
         <nav id="main-navigation" class="hidden md:flex md:items-center md:justify-center">
           <ul class="flex flex-wrap items-center justify-center gap-6 lg:gap-10">
             {
@@ -135,7 +171,6 @@ import calender from '../images/date-icon.png';
 
 <!-- Active Tab Styling & Router Logic -->
 <style>
-  /* Active menu tab style matching the reference image active highlight box */
   .nav-link.active {
     background-color: #cbbece !important;
     color: #800000ff !important;
@@ -163,16 +198,39 @@ import calender from '../images/date-icon.png';
     });
   }
 
-  // Mobile menu toggle
   function setupMobileMenu() {
-    const btn = document.getElementById('mobile-menu-btn');
+    const menuBtn = document.getElementById('mobile-menu-btn');
     const mobileNav = document.getElementById('mobile-navigation');
+    const sidebarToggleBtn = document.getElementById('mobile-sidebar-toggle-btn');
+    const closeSidebarBtn = document.getElementById('close-sidebar-btn');
+    const sidebar = document.getElementById('sidebar');
+    const overlay = document.getElementById('sidebar-overlay');
 
-    if (btn && mobileNav) {
-      btn.addEventListener('click', () => {
+    // Toggle Mobile Navigation Links
+    if (menuBtn && mobileNav) {
+      menuBtn.addEventListener('click', () => {
         mobileNav.classList.toggle('hidden');
       });
     }
+
+    // Toggle Sidebar Drawer on Mobile
+    function openSidebar() {
+      if (sidebar && overlay) {
+        sidebar.classList.remove('-translate-x-full');
+        overlay.classList.remove('hidden');
+      }
+    }
+
+    function closeSidebar() {
+      if (sidebar && overlay) {
+        sidebar.classList.add('-translate-x-full');
+        overlay.classList.add('hidden');
+      }
+    }
+
+    if (sidebarToggleBtn) sidebarToggleBtn.addEventListener('click', openSidebar);
+    if (closeSidebarBtn) closeSidebarBtn.addEventListener('click', closeSidebar);
+    if (overlay) overlay.addEventListener('click', closeSidebar);
   }
 
   document.addEventListener('astro:page-load', () => {
