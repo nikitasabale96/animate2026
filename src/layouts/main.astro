@@ -2,8 +2,12 @@
 import Layout from './layout.astro';
 import '../css/custom.css';
 import '@astrojs/tailwind/base.css';
-import Fevicon from "../public/faviconicon.png";
 
+import { getImage } from 'astro:assets';
+import myFavicon from '../images/fevicon.png';
+
+// Generate the optimized static URL for the head tag
+const favicon = await getImage({ src: myFavicon, format: 'png' });
 ---
 
 <html lang="en">
@@ -17,33 +21,30 @@ import Fevicon from "../public/faviconicon.png";
     />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
 
-    <!-- <link rel="icon" type="image/png" href={Fevicon.src} /> -->
-     <link rel="icon" type="image/png" href={Fevicon.src} />
-     <link rel="icon" href="/faviconicon.png" type="image/png" />
-<link rel="shortcut icon" href="/faviconicon.png" type="image/png" />
+    <!-- Use the resolved 'favicon' variable here -->
+    <link rel="icon" type="image/png" href={favicon.src} />
 
     <title>ANIMATE 2026</title>
   </head>
-    <body class='prose max-w-none ' style="background-color:#e5e5e5 ;">
+  <body class='prose max-w-none' style="background-color:#e5e5e5 ;">
     <Layout>
-    <div class="lg:hidden border-t-2 border-t-gray-800 mb-6 pb-6">
-    </div>
+      <div class="lg:hidden border-t-2 border-t-gray-800 mb-6 pb-6">
+      </div>
       <slot />
-      <!-- back to home -->
-      
     </Layout>
-<div class="fixed bottom-5 end-5 z-50">
-  <div class="m-3 rounded-full bg-[#44aa00ff] p-3 text-xs font-medium uppercase leading-tight text-white shadow-md transition-colors duration-300 ease-in-out hover:bg-[#800000ff] hover:shadow-lg">
-    <a 
-      href="/"
-      type="button"
-      data-twe-ripple-init
-      data-twe-ripple-color="light"
-      class="flex items-center justify-center focus:outline-none"
-      aria-label="Home"
-    >
-      <i class="far fa-home text-3xl text-white transition-transform hover:animate-bounce duration-700 ease-in-out"></i>
-    </a>
-  </div>
-</div>  </body>
+    <div class="fixed bottom-5 end-5 z-50">
+      <div class="m-3 rounded-full bg-[#44aa00ff] p-3 text-xs font-medium uppercase leading-tight text-white shadow-md transition-colors duration-300 ease-in-out hover:bg-[#800000ff] hover:shadow-lg">
+        <a 
+          href="/"
+          type="button"
+          data-twe-ripple-init
+          data-twe-ripple-color="light"
+          class="flex items-center justify-center focus:outline-none"
+          aria-label="Home"
+        >
+          <i class="far fa-home text-3xl text-white transition-transform hover:animate-bounce duration-700 ease-in-out"></i>
+        </a>
+      </div>
+    </div>  
+  </body>
 </html>
