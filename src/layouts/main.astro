@@ -2,22 +2,29 @@
 import Layout from './layout.astro';
 import '../css/custom.css';
 import '@astrojs/tailwind/base.css';
-// import { ViewTransitions } from 'astro:transitions';
+import Fevicon from "../public/faviconicon.png";
+
 ---
 
-<html lang='en'>
+<html lang="en">
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
 
-    <meta charset='utf-8' />
-    
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css"
+      rel="stylesheet"
+    />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
-   <title>ANIMATE 2025</title>
-    <!-- <ViewTransitions /> -->
-   
+
+    <!-- <link rel="icon" type="image/png" href={Fevicon.src} /> -->
+     <link rel="icon" type="image/png" href={Fevicon.src} />
+     <link rel="icon" href="/faviconicon.png" type="image/png" />
+<link rel="shortcut icon" href="/faviconicon.png" type="image/png" />
+
+    <title>ANIMATE 2026</title>
   </head>
-  <body class='prose max-w-none ' style="background-color:#e5e5e5 ;">
+    <body class='prose max-w-none ' style="background-color:#e5e5e5 ;">
     <Layout>
     <div class="lg:hidden border-t-2 border-t-gray-800 mb-6 pb-6">
     </div>
